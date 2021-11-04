@@ -71,7 +71,7 @@
 			<h1 class="header-author"><a href="/">A1ex</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">人之所罕至焉，故非有志者不能至也。</p>
+		<p class="header-subtitle">人之所罕至焉，故非有志者不能至也</p>
 		
 
 		<nav class="header-menu">
@@ -139,7 +139,7 @@
 			  <h1 class="header-author js-header-author">A1ex</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>人之所罕至焉，故非有志者不能至也。<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>人之所罕至焉，故非有志者不能至也<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -196,6 +196,198 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+  
+    <article id="post-PWN-使用不同版本的glibc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/08/30/PWN-%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84glibc/" target="_blank">PWN_使用不同版本的glibc</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/08/30/PWN-%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84glibc/" class="archive-article-date">
+        <time datetime="2020-08-30T13:45:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-30</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>最近开始做高版本的 glibc PWN题，一个很困扰的问题就是如何快速对不同的题切换 glibc版本。后面从网上搜集了一大堆资料，大概整理一下我 能够切实可行的方法吧。也方便我后面再使用。</p>
+    
+    <a class="article-more-a" href="/2020/08/30/PWN-%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84glibc/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PWN</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/08/30/PWN-%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84glibc/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-IO-FILE-Related" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/08/30/IO-FILE-Related/" target="_blank">IO_FILE_Related</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/08/30/IO-FILE-Related/" class="archive-article-date">
+        <time datetime="2020-08-30T13:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-30</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="FILE结构"><a href="#FILE结构" class="headerlink" title="FILE结构"></a>FILE结构</h2><p>深入学习一下 IO 攻击，本篇涉及的基本原理都只是从 <a href="https://ctf-wiki.github.io/ctf-wiki/pwn/readme-zh/" target="_blank" rel="noopener">CTF.wiki</a>上总结的。然后找了几个比较典型的 IO 攻击例题。但是感觉对这块还得加强练习，不同的 libc 版本，攻击的方式也就有所不同。后续再总结对于 不同版本的 libc 的 IO 攻击。</p>
+    
+    <a class="article-more-a" href="/2020/08/30/IO-FILE-Related/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PWN</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IO攻击</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/08/30/IO-FILE-Related/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
 
   
     <article id="post-2020-QWB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -946,187 +1138,6 @@
 
 
   
-    <article id="post-Windows系统异常处理调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/07/31/Windows%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%B0%83%E8%AF%95/" target="_blank">Windows系统异常处理调试</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/07/31/Windows%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%B0%83%E8%AF%95/" class="archive-article-date">
-        <time datetime="2020-07-31T08:39:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>因为做项目，需要做漏洞检测。但是很多漏洞由于只能找到 POC，能触发程序崩溃。所以就需要做一个 系统异常处理的检测。在之前对异常处理有一定的了解下，很想从内核 对系统异常处理的步骤进行一个全面的调试分析。所以完成这篇文章，算是对这个知识的总结。</p>
-    
-    <a class="article-more-a" href="/2020/07/31/Windows%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%B0%83%E8%AF%95/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Windows Kernel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">异常处理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/07/31/Windows%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%B0%83%E8%AF%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BUUOJ-PWNWN-WP-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/07/29/BUUOJ-PWNWN-WP-1/" target="_blank">BUUOJ_PWNWN_WP_1</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/07/29/BUUOJ-PWNWN-WP-1/" class="archive-article-date">
-        <time datetime="2020-07-29T09:56:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>现在开始争取每天都要做一道PWN题，并且难度要逐渐增大。做到每道题目都要弄懂原理，能够复现成功。争取每天都有一两道题能让自己学到新的知识，并且写下WP。</p>
-<p>题目来源，现在主要是 BUUOJ 上的题目，以后再逐渐转到比赛题目吧。</p>
-    
-    <a class="article-more-a" href="/2020/07/29/BUUOJ-PWNWN-WP-1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-PWN -CTF</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/07/29/BUUOJ-PWNWN-WP-1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/9/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/">Next &amp;raquo;</a>
@@ -1834,6 +1845,34 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">类型混淆</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">OOB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">mmio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">pimo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存映射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">PCI初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IP分片</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数组越界</a>
               </li>
             
             <div class="clearfix"></div>
