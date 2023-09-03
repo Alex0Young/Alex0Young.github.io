@@ -351,10 +351,10 @@
   var titleTime;
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) {
-      document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+      document.title = "(つェ⊂) 天黑啦~ " + originTitle;
       clearTimeout(titleTime);
     } else {
-      document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+      document.title = "(*´∇｀*) 天亮啦~ " + originTitle;
       titleTime = setTimeout(function () {
         document.title = originTitle;
       }, 2000);
@@ -1270,7 +1270,7 @@
   }
 
   
-    var modelName = "haruto";
+    var modelName = "koharu";
   
 
   var modelJsonPath = "";
@@ -1304,17 +1304,20 @@
 
   
   
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
+  
 </body>
 
 </html>
-     </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">v8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">quickJS</a>
+ color3">quickJS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1625,7 +1628,7 @@
   }
 
   
-    var modelName = "haruto";
+    var modelName = "koharu";
   
 
   var modelJsonPath = "";
@@ -1658,6 +1661,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
