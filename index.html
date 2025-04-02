@@ -3,6 +3,7 @@
 <body>
     <h1>Website A（纯前端动态生成iframe）</h1>
     <div id="iframeContainer"></div>
+
     <script>
         function createIframe() {
             // 1. 生成随机参数（时间戳或随机数）
@@ -12,7 +13,7 @@
             const iframe = document.createElement('iframe');
             iframe.width = '100%';
             iframe.height = '600px';
-            iframe.src = 'https://baidu.com/yuanbao.html' + randomParam; // 替换为B的实际路径
+            iframe.src = 'https://baidu.com/index.html' + randomParam; // 替换为B的实际路径
             
             // 3. 防止跨域报错（可选）
             iframe.onload = () => {
